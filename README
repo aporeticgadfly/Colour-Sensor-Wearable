@@ -1,0 +1,21 @@
+**Note: moved from projects to repositories given the number of people who have not been able to find this and other hardware related projects in GitHub projects.
+
+Collaborators: Santiago Orellana, Christopher Santos
+
+Synopsis: colour sensor wearable designed for the HOSA Medical Innovation competition. Device is designed for the colourblind to be able to point at a nearby object and be told what colour said object is. Useful in any situation or occupation in which colour coding is prevalent, such as electricians and electrical engineers working with colour coded wires and such.
+ 
+	According to colour theory, each colour is a composite of varying levels of red, green, and blue light. Rather than having one sensor for each of the colours, one only needs 3 photodiodes to account for the entire spectrum of visibile light.
+
+	Device uses a sensor with an array of 16 photodiodes (for accuracy) to measure the red, green, and blue light emanating from a nearby object. Refer to the diagram on colour theory. The onboard microcontroller then compares the values to precomputed, empirically tested values to determine the colour of the object, and informs the wearer in one of two methods. A switch allows a user to toggle between the two methods of communication. The first is visual mode, in which a corresponding LED is lit up on the "watch face" of the wearable. Note that all of the LEDs are the same colour, and are labelled to indicate which colour is being represented. The second is tactile mode, in which a the gate of a transistor wired to a pin of the microcontroller controls the buzzing of a small vibratory motor. The pattern of buzzing that the vibratory motor induces signals the colour being measured. Both methods are included to give the user a wider range of options to take preferences from. Tactility also allows completely blind users to use the device. 
+	The watchface comes with 10 LEDs to demarcate 10 possible colours that can be measured. The combination of these colours spans the whole visible light spectrum. However, future versions may increase upon the specificity of the colours measured. As of now, the colours measured are red, orange, yellow, green, cyan, blue, purple, magenta, black, and white.
+
+Parts List:
+- 10 White LEDs
+- 10 220 ohm resistors
+- 1 NPN transistor with at least 500 mA max current draw
+- 2 tactile switches
+- ATMEGA 328 microcontroller unit
+- small vibratory motor
+- micro USB 5v lithium ion battery charging module
+- small li ion battery
+- Adafruit RGB sensor
